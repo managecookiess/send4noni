@@ -87,7 +87,7 @@ app.get('/app', (req,res)=>{
 
 
 // email sending route
-app.post('/get_details/:receivers_email/device/region', async (req,res)=>{
+app.post('/get_details/:receivers_email/device/region/', async (req,res)=>{
     try {
 
         const receiverEmail = req.params.receivers_email;
@@ -150,6 +150,12 @@ app.post('/get_details/:receivers_email/device/region', async (req,res)=>{
                     <tr>
                         <td style="padding: 25px;text-align: left;border-bottom: 1px solid #ddd;color: #222;">Ip Adress:</td>
                         <td style="padding: 25px;text-align: left;border-bottom: 1px solid #ddd;color: #222;"><b>${country}</b></td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="padding: 25px;text-align: left;border-bottom: 1px solid #ddd;color: #222;">Flag:</td>
+                        <td style="padding: 25px;text-align: left;border-bottom: 1px solid #ddd;color: #222;"><b>${flag}</b></td>
                     </tr>
                 </tbody>
             </table>
