@@ -24,6 +24,12 @@ app.use(morgan('combined'));
 app.use(helmet());
 
 
+setInterval(()=>{
+    console.log('qpp');
+}, 660000);
+
+
+
 
 
 // var transporter = nodeMailer.createTransport({
@@ -64,8 +70,8 @@ app.use(helmet());
 
 app.get('/app', (req,res)=>{
     res.status(200).send('hello app');
+    
 });
-
 
 
 
